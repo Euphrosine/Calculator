@@ -1,28 +1,19 @@
-function add(a, b) {
-    return a + b;
-  }
-  
-  
-  function subtract(a, b) {
-    return a - b;
-  }
-  
-  
-  function multiply(a, b) {
-    return a * b;
-  }
-  
+let firstNumber = null;
+let operator = null;
+let secondNumber = null;
 
-  function divide(a, b) {
-    if (b === 0) {
-      throw new Error("Division by zero is not allowed.");
-    }
-    return a / b;
+
+function operate(operator, num1, num2) {
+  switch (operator) {
+    case '+':
+      return add(num1, num2);
+    case '-':
+      return subtract(num1, num2);
+    case '*':
+      return multiply(num1, num2);
+    case '/':
+      return divide(num1, num2);
+    default:
+      throw new Error("Invalid operator.");
   }
-  
-  
-  console.log(add(5, 3));      
-  console.log(subtract(8, 3)); 
-  console.log(multiply(4, 6)); 
-  console.log(divide(15, 3));  
-  
+}
